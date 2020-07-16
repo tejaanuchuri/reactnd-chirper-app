@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './components/App'
 import { createStore } from 'redux'
-import { provider, Provider } from 'react-redux'
+import { provider } from 'react-redux'
 import reducer from './reducers'
+import middleware from './middleware'
+const store = createStore(reducer,middleware)
 
-const store = createStore(reducer)
-
-ReactDOM.render(<Provider><App /></Provider>,document.getElementById('root'))
+ReactDOM.render(<provider store={store}><App /></provider>,document.getElementById('root'))

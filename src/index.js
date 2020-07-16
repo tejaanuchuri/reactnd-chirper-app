@@ -10,4 +10,5 @@ const store = createStore(reducer)
 
 ReactDOM.render(
     <Provider>
-<App /></Provider>, document.getElementById('root'))
+<App /></Provider>, 
+document.getElementById('root'))

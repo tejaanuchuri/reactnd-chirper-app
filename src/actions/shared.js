@@ -1,6 +1,6 @@
 import { getInitialData } from '../utils/api'
-import { receiveTweets } from '../actions/tweets'
-import { receiveUsers, receieveUsers } from '../actions/users'
+import { receieveUsers } from '../actions/users'
+import { receieveTweets } from '../actions/tweets'
 import { setAuthedUser } from '../actions/authedUser'
 const AUTHED_ID = 'tylermcginnis'
 export function handleInitialData () {
@@ -8,7 +8,7 @@ export function handleInitialData () {
         return getInitialData()
             .then(({users,tweets}) => {
                 dispatch(receieveUsers(users))
-                dispatch(receiveTweets(tweets))
+                dispatch(receieveTweets(tweets))
                 dispatch(setAuthedUser(AUTHED_ID))
             })
     }
